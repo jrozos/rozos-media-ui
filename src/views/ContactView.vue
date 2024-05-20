@@ -56,22 +56,23 @@ export default {
   color: white; /* Icon color */
   font-size: 24px; /* Icon size */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
+  text-decoration: none;
 }
 
 .social-icon:hover {
   background-color: #0d8dd1; /* Darker shade on hover */
 }
 .custom-input {
-  border: 1px solid white; /* White border */
-  background-color: transparent; /* No fill */
-  color: white; /* Text color, adjust as needed */
+  border: 1px solid white !important; /* White border */
+  background-color: transparent !important; /* No fill */
+  color: white !important; /* Text color, adjust as needed */
 }
 
 .custom-input:focus {
-  border-color: white; /* Maintain white border on focus */
-  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25); /* Optional: add a subtle focus shadow */
-  background-color: transparent; /* Ensure no fill on focus */
-  color: white; /* Maintain text color on focus */
+  border-color: white !important; /* Maintain white border on focus */
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important; /* Optional: add a subtle focus shadow */
+  background-color: transparent !important; /* Ensure no fill on focus */
+  color: white !important; /* Maintain text color on focus */
 }
 
 /* Optional: Style the label */
