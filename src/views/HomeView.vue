@@ -33,3 +33,11 @@ export default {
   },
 };
 </script>
+<style>
+body {
+  background-color: #f6f6f9 !important;
+}
+.shadow {
+  --bs-box-shadow: 30px 30px 0px 0px rgba(67, 8, 95);
+}
+</style>
