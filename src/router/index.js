@@ -12,20 +12,20 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/service",
-    name: "service",
+    path: "/services",
+    name: "services",
     component: ServiceView,
   },
-  {
-    path: "/project",
-    name: "project",
-    component: ProjectView,
-  },
-  {
-    path: "/technology",
-    name: "technology",
-    component: TechnologyView,
-  },
+  // {
+  //   path: "/project",
+  //   name: "project",
+  //   component: ProjectView,
+  // },
+  // {
+  //   path: "/technology",
+  //   name: "technology",
+  //   component: TechnologyView,
+  // },
   {
     path: "/contact",
     name: "contact",

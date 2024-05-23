@@ -1,26 +1,42 @@
 <template>
-  <div class="row justify-content-center my-5">
-    <div class="col-10 col-sm-8 col-lg-10 text-center">
-      <h2 class="display-5 fw-bold lh-1 mb-3">Proyectos</h2>
-    </div>
-    <div class="col-10 col-sm-8 col-lg-10 text-center mt-5">
-      <p class="lead">Proyectos realizados para mis clientes</p>
-    </div>
-  </div>
-  <div class="row my-5 py-5">
-    <div v-for="project in projects" :key="project.id" class="col">
-      <div class="card h-100 border-0">
-        <div v-for="asset in project.assets" :key="asset.id">
-          <img :src="host + asset.image" class="card-img" :alt="asset.name" />
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">{{ project.name }}</h5>
-          <p class="card-text">
-            {{ project.description }}
-          </p>
-          <a class="btn btn-outline-dark" :href="project.url" target="_blank"
-            >Visitar</a
-          >
+  <div
+    id="project"
+    class="vh-100 d-flex align-items-center justify-content-center text-light"
+  >
+    <div class="container">
+      <div class="my-5 py-5">
+        <h2 class="display-5 fw-bold lh-1 mb-4">Proyectos</h2>
+        <p class="lead">Proyectos realizados para mis clientes</p>
+      </div>
+      <div class="row">
+        <div
+          v-for="project in projects"
+          :key="project.id"
+          class="col-12 col-md-6 col-lg-4 mb-5"
+        >
+          <div class="card h-100 border-0 bg-dark text-light">
+            <div v-for="asset in project.assets" :key="asset.id">
+              <img
+                :src="host + asset.image"
+                class="card-img"
+                :alt="asset.name"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ project.name }}</h5>
+              <p class="card-text">
+                {{ project.description }}
+              </p>
+            </div>
+            <div class="card-body">
+              <a
+                class="btn btn-outline-light"
+                :href="project.url"
+                target="_blank"
+                >Visitar</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
