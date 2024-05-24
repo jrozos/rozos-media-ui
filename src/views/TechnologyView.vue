@@ -1,10 +1,13 @@
 <template>
-  <div class="vh-100 d-flex align-items-center justify-content-center">
-    <div class="w-100 text-center">
+  <div
+    id="tech"
+    class="vh-100 d-flex align-items-center justify-content-center bg-light"
+  >
+    <div class="container text-center">
       <div class="mb-4">
         <h2 class="display-5 fw-bold py-5">Tecnologías</h2>
       </div>
-      <div class="d-flex flex-wrap justify-content-around">
+      <div class="row justify-content-center">
         <div
           v-for="technology in technologies"
           :key="technology.id"

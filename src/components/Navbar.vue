@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img
@@ -24,27 +24,33 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
+            <a class="nav-link active" aria-current="page" href="#service"
               >Servicios</a
+            >
+            <!-- <router-link to="/services" class="nav-link active"
+              >Servicios</router-link -->
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
+            <a class="nav-link active" aria-current="page" href="#project"
               >Proyectos</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
+            <a class="nav-link active" aria-current="page" href="#tech"
               >Tecnologías</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contácto</a>
+            <a class="nav-link active" aria-current="page" href="#contact"
+              >Contácto</a
+            >
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- <router-view /> -->
 </template>
 
 <script>
