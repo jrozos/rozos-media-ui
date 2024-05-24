@@ -11,8 +11,6 @@
               :src="host + asset.image"
               :alt="asset.name"
               class="d-block mx-lg-auto img-fluid rounded shadow"
-              width="700"
-              height="500"
               loading="lazy"
             />
           </div>
