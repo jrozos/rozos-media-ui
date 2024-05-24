@@ -43,7 +43,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#contact"
-              >Contácto</a
+              >Contactame</a
             >
           </li>
         </ul>

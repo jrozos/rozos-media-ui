@@ -2,8 +2,10 @@
   <div id="contact" class="bg-dark text-secondary px-4 py-5">
     <div class="row justify-content-center py-5">
       <div class="col-lg-4 text-white">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Contácto</h1>
-        <p class="lead">Por favor no dudes en mandar un mensaje</p>
+        <h1 class="display-4 fw-bold lh-1 mb-3">Contactame</h1>
+        <p class="lead">
+          ¿Tienes un proyecto o una oferta laboral interesante?
+        </p>
         <a href="https://www.linkedin.com/in/peperozos/" class="social-icon">
           <i class="fab fa-linkedin"></i>
           <!-- Use Font Awesome for the icon -->

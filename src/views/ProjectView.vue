@@ -12,7 +12,7 @@
         <div
           v-for="project in projects"
           :key="project.id"
-          class="col-12 col-md-6 col-lg-4 mb-5"
+          class="col-12 col-md-6 col-lg-6 mb-5"
         >
           <div class="card h-100 border-0 bg-dark text-light">
             <div v-for="asset in project.assets" :key="asset.id">
