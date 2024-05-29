@@ -3,7 +3,7 @@
     <div class="container">
       <a class="navbar-brand" href="#">
         <img
-          src="http://rozos-media.me/img/logo.png"
+          :src="imgHost + 'logo.png'"
           alt="Logo"
           width="50"
           height="50"
@@ -56,6 +56,11 @@
 <script>
 export default {
   name: "Navbar",
+  data() {
+    return {
+      imgHost: this.$imgHost,
+    };
+  },
 };
 </script>
 

@@ -22,7 +22,7 @@
       </div>
       <div class="col-10 col-sm-8 col-lg-6">
         <img
-          src="http://rozos-media.me/img/hero-image.jpeg"
+          :src="imgtHost + 'hero-image.jpeg'"
           class="d-block mx-lg-auto img-fluid rounded shadow"
           alt="Rozos Media"
           loading="lazy"
@@ -34,5 +34,10 @@
 <script>
 export default {
   name: "Herobanner",
+  data() {
+    return {
+      imgtHost: this.$imgtHost,
+    };
+  },
 };
 </script>
