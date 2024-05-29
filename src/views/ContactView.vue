@@ -13,36 +13,124 @@
       </div>
       <div class="col-lg-4">
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Correo electrónico</label
-          >
+          <label for="name" class="form-label">Nombre</label>
+          <input type="name" class="form-control custom-input" v-model="name" />
+          <div>
+            <small class="text-danger">{{ errorName }}</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
           <input
             type="email"
             class="form-control custom-input"
-            id="exampleFormControlInput1"
+            v-model="email"
             placeholder="name@example.com"
           />
+          <div>
+            <small class="text-danger">{{ errorEmail }}</small>
+          </div>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Mensaje</label
-          >
+          <label for="message" class="form-label">Mensaje</label>
           <textarea
             class="form-control custom-input"
-            id="exampleFormControlTextarea1"
+            v-model="message"
             rows="3"
+            @keyup="ValidMessage()"
           ></textarea>
+          <div>
+            <small class="text-danger">{{ errorMessage }}</small>
+          </div>
         </div>
         <div class="mb-3">
-          <button type="button" class="btn btn-light">Enviar</button>
+          <div v-if="loaderSave">
+            <span class="display-6"
+              ><i class="fa-solid fa-spinner fa-spin"></i
+            ></span>
+          </div>
+          <div v-else>
+            <button type="button" class="btn btn-light" @click="validForm()">
+              Enviar
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import apiClient from "@/axios.js";
+import axios from "axios";
 export default {
   name: "ContactView",
+  data() {
+    return {
+      loaderSave: false,
+      name: "",
+      email: "",
+      message: "",
+      errorName: "",
+      errorEmail: "",
+      errorMessage: "",
+    };
+  },
+  methods: {
+    ValidMessage() {
+      this.errorMessage = "";
+      this.errorMessage =
+        this.message.length >= 255
+          ? "El mensaje es muy largo solo se permiten 255 caracteres"
+          : "";
+    },
+    validForm() {
+      this.errorName = "";
+      this.errorEmail = "";
+      this.errorMessage = "";
+
+      this.errorName = this.name.trim() === "" ? "El nombre es requerido" : "";
+
+      this.errorEmail =
+        this.email && !this.validEmail(this.email)
+          ? "E-mail inválido ej: name@example.com"
+          : "";
+      this.errorMessage =
+        this.message.trim() === "" ? "El mensaje es requerido" : "";
+
+      if (!this.errorName && !this.errorEmail && !this.errorMessage) {
+        this.sendMessage();
+      }
+    },
+    validEmail: function (email) {
+      var re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+    async sendMessage() {
+      try {
+        this.loaderSave = true;
+        const response = await apiClient.post("/messages", {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+        });
+        if (response.status === 201) {
+          // Clear variables
+          this.name = "";
+          this.email = "";
+          this.message = "";
+
+          // Send success notification
+          // this.showSuccessNotification("Message sent successfully!");
+        } else {
+          console.error("Unexpected response status:", response.status);
+        }
+      } catch (error) {
+        console.error("Error sending message:", error);
+      }
+      this.loaderSave = false;
+    },
+  },
 };
 </script>
 
