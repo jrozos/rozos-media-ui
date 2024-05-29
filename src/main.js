@@ -6,15 +6,14 @@ import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // Define constant variables
-const ASSET_HOST = "https://app.rozosmedia.com/storage/";
-const IMG_HOST = "https://app.rozosmedia.com/img/";
+const HOST = "https://app.rozosmedia.com";
+// const HOST = "http://rozos-media.me";
 
 const app = createApp(App);
 
 // Attach constants to app instance
-app.config.globalProperties.$assetHost = ASSET_HOST;
-app.config.globalProperties.$imgHost = IMG_HOST;
+app.config.globalProperties.$host = HOST;
 
-createApp(App).use(store).use(router).mount("#app");
+app.use(store).use(router).mount("#app");
 
 import "bootstrap/dist/js/bootstrap";

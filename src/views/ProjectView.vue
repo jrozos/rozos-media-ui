@@ -17,7 +17,7 @@
           <div class="card h-100 border-0 bg-dark text-light">
             <div v-for="asset in project.assets" :key="asset.id">
               <img
-                :src="assetHost + asset.image"
+                :src="host + '/storage/' + asset.image"
                 class="card-img"
                 :alt="asset.name"
               />
@@ -50,8 +50,7 @@ export default {
   data() {
     return {
       projects: [],
-      // host: "http://rozos-media.me/storage/",
-      assetHost: this.$assetHost,
+      host: this.$host,
     };
   },
   created() {

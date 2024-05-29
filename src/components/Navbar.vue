@@ -3,7 +3,7 @@
     <div class="container">
       <a class="navbar-brand" href="#">
         <img
-          :src="imgHost + 'logo.png'"
+          :src="host + '/img/logo.png'"
           alt="Logo"
           width="50"
           height="50"
@@ -58,7 +58,7 @@ export default {
   name: "Navbar",
   data() {
     return {
-      imgHost: this.$imgHost,
+      host: this.$host,
     };
   },
 };
