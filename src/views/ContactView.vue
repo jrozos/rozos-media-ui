@@ -1,7 +1,9 @@
 <template>
   <div id="contact" class="bg-dark text-secondary px-4 py-5">
     <div class="row justify-content-center py-5">
-      <div class="col-lg-4 text-white">
+      <div
+        class="col-lg-4 text-white wow animate__animated animate__slideInLeft"
+      >
         <h1 class="display-4 fw-bold lh-1 mb-3">Contactame</h1>
         <p class="lead">
           ¿Tienes un proyecto o una oferta laboral interesante?
@@ -12,14 +14,14 @@
         </a>
       </div>
       <div class="col-lg-4">
-        <div class="mb-3">
+        <div class="mb-3 wow animate__animated animate__slideInDown">
           <label for="name" class="form-label">Nombre</label>
           <input type="name" class="form-control custom-input" v-model="name" />
           <div>
             <small class="text-danger">{{ errorName }}</small>
           </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 wow animate__animated animate__slideInDown">
           <label for="email" class="form-label">Correo electrónico</label>
           <input
             type="email"
@@ -31,7 +33,7 @@
             <small class="text-danger">{{ errorEmail }}</small>
           </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 wow animate__animated animate__slideInDown">
           <label for="message" class="form-label">Mensaje</label>
           <textarea
             class="form-control custom-input"
@@ -43,7 +45,7 @@
             <small class="text-danger">{{ errorMessage }}</small>
           </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 wow animate__animated animate__slideInDown">
           <div v-if="loaderSave">
             <span class="display-6"
               ><i class="fa-solid fa-spinner fa-spin"></i
@@ -61,7 +63,6 @@
 </template>
 <script>
 import apiClient from "@/axios.js";
-import axios from "axios";
 export default {
   name: "ContactView",
   data() {

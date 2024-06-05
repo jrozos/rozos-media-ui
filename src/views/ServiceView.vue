@@ -1,7 +1,9 @@
 <template>
   <div id="service" class="container-fluid text-center bg-light py-5">
     <div class="mb-4">
-      <h2 class="display-5 fw-bold py-5">Servicios</h2>
+      <h2 class="display-5 fw-bold py-5 wow animate__animated animate__fadeIn">
+        Servicios
+      </h2>
     </div>
     <div class="container">
       <div v-for="service in services" class="row align-items-center g-5 py-5">
@@ -10,12 +12,12 @@
             <img
               :src="host + '/storage/' + asset.image"
               :alt="asset.name"
-              class="d-block mx-lg-auto img-fluid rounded shadow"
+              class="d-block mx-lg-auto img-fluid rounded shadow wow animate__animated animate__fadeIn"
               loading="lazy"
             />
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 wow animate__animated animate__fadeIn">
           <h1 class="display-5 fw-bold lh-1 mb-3">{{ service.name }}</h1>
           <p class="lead">
             {{ service.description }}

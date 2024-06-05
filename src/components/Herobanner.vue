@@ -1,7 +1,9 @@
 <template>
   <div class="vh-100 d-flex align-items-center justify-content-center">
     <div class="row align-items-center justify-content-center">
-      <div class="col-lg-6 mb-4 text-light">
+      <div
+        class="col-lg-6 mb-4 text-light wow animate__animated animate__fadeInLeft"
+      >
         <h1 class="display-4 fw-bold lh-1 mb-3">Rozos Media</h1>
         <p class="lead">Hola, soy Pepe Rozos</p>
         <p class="lead">
@@ -20,10 +22,10 @@
           >
         </div>
       </div>
-      <div class="col-10 col-sm-8 col-lg-6">
+      <div class="col-10 col-sm-8 col-lg-6 mb-5">
         <img
           :src="host + '/img/hero-image.jpeg'"
-          class="d-block mx-lg-auto img-fluid rounded shadow"
+          class="d-block mx-lg-auto img-fluid rounded shadow wow animate__animated animate__fadeIn"
           alt="Rozos Media"
           loading="lazy"
         />
