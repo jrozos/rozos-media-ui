@@ -29,7 +29,6 @@
             >
             <!-- <router-link to="/services" class="nav-link active"
               >Servicios</router-link -->
-            >
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#project"

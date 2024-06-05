@@ -1,10 +1,10 @@
 <template>
   <div
     id="project"
-    class="vh-100 d-flex align-items-center justify-content-center text-light"
+    class="vh-100- d-flex- align-items-center justify-content-center text-light py-5"
   >
     <div class="container">
-      <div class="my-5 py-5">
+      <div class="my-5 py-5 wow animate__animated animate__fadeInDown">
         <h2 class="display-5 fw-bold lh-1 mb-4">Proyectos</h2>
         <p class="lead">Proyectos realizados para mis clientes</p>
       </div>
@@ -12,7 +12,7 @@
         <div
           v-for="project in projects"
           :key="project.id"
-          class="col-12 col-md-6 col-lg-6 mb-5"
+          class="col-12 col-md-6 col-lg-6 mb-5 wow animate__animated animate__fadeIn"
         >
           <div class="card h-100 border-0 bg-dark text-light">
             <div v-for="asset in project.assets" :key="asset.id">
