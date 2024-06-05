@@ -1,17 +1,17 @@
 <template>
   <div
     id="tech"
-    class="vh-100 d-flex align-items-center justify-content-center bg-light"
+    class="vh-100- d-flex- align-items-center justify-content-center bg-light py-5"
   >
-    <div class="container text-center">
-      <div class="mb-4">
-        <h2 class="display-5 fw-bold py-5">Tecnologías</h2>
+    <div class="container">
+      <div class="my-5 py-5">
+        <h2 class="display-5 fw-bold lh-1 mb-4">Tecnologías</h2>
       </div>
       <div class="row justify-content-center">
         <div
           v-for="technology in technologies"
           :key="technology.id"
-          class="col-12 col-md-4 col-lg-2 mb-4"
+          class="col-6 col-md-4 col-lg-2 mb-5"
         >
           <div class="card h-100 border-0">
             <div class="card-body">

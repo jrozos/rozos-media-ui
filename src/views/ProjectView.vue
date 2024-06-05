@@ -1,7 +1,7 @@
 <template>
   <div
     id="project"
-    class="vh-100 d-flex align-items-center justify-content-center text-light"
+    class="vh-100- d-flex- align-items-center justify-content-center text-light py-5"
   >
     <div class="container">
       <div class="my-5 py-5">
