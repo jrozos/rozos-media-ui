@@ -8,7 +8,7 @@
         <div class="col-10 col-sm-8 col-lg-6">
           <div v-for="asset in service.assets" :key="asset.id">
             <img
-              :src="host + asset.image"
+              :src="host + '/storage/' + asset.image"
               :alt="asset.name"
               class="d-block mx-lg-auto img-fluid rounded shadow"
               loading="lazy"
@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       services: [],
-      host: "http://rozos-media.me/storage/",
+      host: this.$host,
     };
   },
   created() {

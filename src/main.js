@@ -5,6 +5,15 @@ import store from "./store";
 import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-createApp(App).use(store).use(router).mount("#app");
+// Define constant variables
+const HOST = "https://app.rozosmedia.com";
+// const HOST = "http://rozos-media.me";
+
+const app = createApp(App);
+
+// Attach constants to app instance
+app.config.globalProperties.$host = HOST;
+
+app.use(store).use(router).mount("#app");
 
 import "bootstrap/dist/js/bootstrap";
