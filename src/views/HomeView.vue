@@ -1,9 +1,15 @@
 <template>
   <div id="app" class="bg-dark">
     <Navbar />
-    <div class="container">
-      <!-- <div class="container col-xxl-10 px-4 py-5"> -->
-      <Herobanner />
+    <div
+      :style="{
+        backgroundImage: 'url(' + imageUrl + ')',
+        backgroundSize: 'cover',
+      }"
+    >
+      <div class="container">
+        <Herobanner />
+      </div>
     </div>
     <ServiceView />
     <ProjectView />
@@ -31,6 +37,15 @@ export default {
     TechnologyView,
     ContactView,
     Footer,
+  },
+  data() {
+    return {
+      host: this.$host,
+      imageUrl: "",
+    };
+  },
+  mounted() {
+    this.imageUrl = this.host + "/img/herobanner.png";
   },
 };
 </script>
