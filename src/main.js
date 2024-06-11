@@ -7,8 +7,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "animate.css";
 
 // Define constant variables
-// const HOST = "https://app.rozosmedia.com";
-const HOST = "http://rozos-media.me";
+const HOST = "https://app.rozosmedia.com";
+// const HOST = "http://rozos-media.me";
 
 const app = createApp(App);
 
