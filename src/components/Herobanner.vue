@@ -24,7 +24,7 @@
       </div>
       <div class="col-10 col-sm-8 col-lg-6 mb-5">
         <img
-          :src="host + '/img/hero-image.jpeg'"
+          :src="host + '/img/hero-image.png'"
           class="d-block mx-lg-auto img-fluid rounded shadow wow animate__animated animate__fadeIn"
           alt="Rozos Media"
           loading="lazy"
